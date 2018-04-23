@@ -45,16 +45,18 @@ function weather(){
 }
 
 function getCity(){
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
-    xhr.onreadystatechange = function(){
-        if (xhr.readyState === XMLHttpRequest.DONE){
-            city.textContent = xhr.response.results[0].formatted_address;
+    fetch(urlCity).then(response=>{
+        if(response.ok){
+            return response.json();
         }
-    };
-    xhr.open('GET', urlCity);
-    xhr.send();
+        throw new Error('Request failed');
+    }, networkError => console.log(networkError.message)
+    ).then(jsonResponse =>{
+        city.textContent = jsonResponse.results[0].formatted_address;
+    }); 
 }
+
+
 
 
 
