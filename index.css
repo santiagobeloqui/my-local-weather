@@ -1,0 +1,50 @@
+body{
+    background-color: #1DC3F7;
+    color:white;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+#umbrella{
+    margin-top:5%;
+}
+
+h2{
+    margin-top: 5%;
+}
+
+p{
+    font-size: 2vw;
+}
+
+button{
+    background-color: #1DC3F7;
+    border: 2px solid white;
+    border-radius: 2%;
+    color: white;
+    padding: 1%;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+button:hover{
+    cursor: pointer;
+}
+
+#made{
+    margin-top: 5%;
+    font-size: 1.5vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+    p{
+        font-size: 8vw;
+    }
+    #made{
+        font-size: 5vw;
+    }
+}
